@@ -27,14 +27,12 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
+    - name: Qq cena do action
+      uses: ./.github/actions/maven_build
     - name: Qq coisa do docker
       run: docker build . --file src/main/docker/Dockerfile.jvm --tag academy:$(date +%s) 
     - name: Outra cena do docker
       run: docker image ls
-    - name: Qq cena do action
-      uses: ./.github/actions/maven_build
     
 
  
