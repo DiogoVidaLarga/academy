@@ -29,10 +29,12 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: qq coisa do docker
+    - name: Qq coisa do docker
       run: docker build . --file src/main/docker/Dockerfile.jvm --tag academy:$(date +%s) 
-    - name: outra cena do docker
+    - name: Outra cena do docker
       run: docker image ls
+    - name: Qq cena do action
+      uses: ./.github/actions/maven_build
     
 
  
