@@ -31,6 +31,8 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: qq coisa do docker
       run: docker build . --file src/main/docker/Dockerfile.jvm --tag academy:$(date +%s) 
+    - name: outra cena do docker
+      run: docker image ls
     
 
  
